@@ -1,0 +1,17 @@
+{
+    "name": "mahka/php-api-project",
+    "require": {
+        "vlucas/phpdotenv": "^5.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mahka\\PhpApiProject\\": "/src"
+        }
+    },
+    "authors": [
+        {
+            "name": "mahka",
+            "email": "mahmoudalikassem@outlook.com"
+        }
+    ]
+}

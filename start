@@ -1,0 +1,37 @@
+#!/bin/bash
+# default port
+PORT=8000
+# default directory
+DIR=public
+# default host
+HOST=localhost
+
+# parse arguments
+while getopts ":p:d:h:" opt; do
+  case $opt in
+  p)
+    PORT=$OPTARG
+    ;;
+  d)
+    DIR=$OPTARG
+    ;;
+  h)
+    HOST=$OPTARG
+    ;;
+  \?)
+    echo "Invalid option: -$OPTARG" >&2
+    ;;
+  esac
+done
+
+# start server
+
+echo "Starting server on port $PORT"
+
+# start server
+
+php -S $HOST:$PORT -t $DIR
+
+# example usage with custom port and directory
+
+# ./start.sh -p 8080 -d public
